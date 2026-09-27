@@ -1,0 +1,190 @@
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #000000;
+}
+
+.container{
+background-color: #fff;
+}
+
+.sol { 
+    position: absolute; 
+ 
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%; 
+    top: 50%;
+    left: 50%;
+ 
+    background: radial-gradient(circle at center, rgb(255, 240, 120) 10%, rgb(255, 166, 0) 50%, rgb(220, 90, 0) 100%); 
+    
+    box-shadow: 
+    0 0 20px rgba(255, 216, 61, 0.9), 
+    0 0 45px rgb(255, 216, 61), 
+    0 0 80px rgba(255, 203, 61, 0.603), 
+    0 0 80px rgba(255, 216, 61, 0.45);
+
+    transform: translate(-50%, -50%);
+}
+.Mercure {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    
+   
+    left: 80px; 
+    z-index: 2;
+
+   
+    background: radial-gradient(circle at 30% 35%, 
+        #ff7b00 0%, 
+        #f76300 35%, 
+        #573114 70%, 
+        #140a04 100%
+    );
+
+   
+    box-shadow: 
+        inset -8px -5px 10px rgba(0, 0, 0, 0.9), 
+        inset 4px 2px 6px rgba(255, 230, 180, 0.8), 
+        -6px 0 15px rgba(255, 170, 50, 0.6);    
+
+    transform: translateX(-50%);
+}
+
+.orbita-Mercure {
+    position: absolute;
+
+    width: 240px;
+    height: 240px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border: 1px solid rgba(253, 253, 253, 0.952);
+
+    border-radius: 50%;
+
+    animation: orbita 4s linear infinite;
+}
+
+@keyframes orbita {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.orbita-Venus{
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border: 1px solid rgba(241, 240, 240, 0.959);
+
+    border-radius: 50%;
+
+    animation: orbita 6s linear infinite;
+}
+
+
+.Venus {
+    position: absolute;
+
+    width: 25px;
+    height: 25px;
+
+    background: #d6a85c;
+
+    border-radius: 50%;
+
+    left: 218px; 
+    z-index: 3;
+    background: radial-gradient(circle at 30% 35%, 
+        #f58484 0%, 
+        #b87433 35%, 
+        #573114 70%, 
+        #140a04 100%
+    );
+
+
+    box-shadow: 
+    inset 4px 2px 6px rgba(0, 0, 0, 0.9), 
+    inset -8px -5px 10px rgba(255, 230, 180, 0.8), 
+   
+    -6px 0 15px rgba(58, 45, 27, 0.6);  
+
+    transform: translateX(-50%);
+}
+
+@keyframes orbitaV{
+
+    from {
+        transform:
+            translate(-50%, -50%)
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            translate(-50%, -50%)
+            rotate(360deg);
+    }
+
+}
+
+.orbita-Terre{
+    position: absolute;
+
+    width: 375px;
+    height: 375px;
+
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+    border: 1px solid white;
+    border-radius: 50%;
+
+    animation: orbita 8s linear infinite;
+}
+
+.Terre{
+    position: absolute;
+
+    width: 30px;
+    height: 30px;
+
+     background-image: radial-gradient(
+    ellipse at 35% 45%, 
+    #48cae4 0%,    
+    #0077b6 40%,   
+    #03045e 70%,   
+    #020208 95%    
+  );
+    border-radius: 50%;
+
+    left: 102px;
+    z-index: 4;
+
+    transform: translateX(-50%);
+    
+
+}
