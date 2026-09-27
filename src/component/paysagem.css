@@ -1,0 +1,727 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #222;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container {
+    position: relative;
+
+    width: 900px;
+    height: 550px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =====================================================
+   CÉU
+===================================================== */
+
+.ceu {
+    position: relative;
+
+    width: 100%;
+    height: 63%;
+
+    overflow: hidden;
+
+    background: linear-gradient(
+        to bottom,
+        #258df0 0%,
+        #58b7f0 55%,
+        #9bdcf5 100%
+    );
+}
+
+
+/* =====================================================
+   SOL
+===================================================== */
+
+.sol {
+    position: absolute;
+
+    width: 118px;
+    height: 118px;
+
+    top: 40px;
+    right: 95px;
+
+    border-radius: 50%;
+
+    background: #ffd83d;
+
+    box-shadow:
+        0 0 20px rgba(255, 216, 61, 0.9),
+        0 0 45px rgba(255, 216, 61, 0.7),
+        0 0 80px rgba(255, 216, 61, 0.45);
+
+    animation: brilhoSol 4s ease-in-out infinite alternate;
+
+    z-index: 2;
+}
+
+
+@keyframes brilhoSol {
+
+    from {
+        scale: 1;
+    }
+
+    to {
+        scale: 1.06;
+    }
+}
+
+
+/* =====================================================
+   NUVENS
+===================================================== */
+
+.nuvem {
+    position: absolute;
+
+    width: 150px;
+    height: 45px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border-radius: 50px;
+
+    z-index: 5;
+}
+
+
+/* Bolha esquerda */
+
+.nuvem::before {
+    content: "";
+
+    position: absolute;
+
+    width: 62px;
+    height: 62px;
+
+    left: 20px;
+    bottom: 12px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border-radius: 50%;
+}
+
+
+/* Bolha direita */
+
+.nuvem::after {
+    content: "";
+
+    position: absolute;
+
+    width: 75px;
+    height: 75px;
+
+    right: 20px;
+    bottom: 8px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border-radius: 50%;
+}
+
+
+/* =====================================================
+   POSIÇÃO DAS NUVENS
+===================================================== */
+
+/* Primeira nuvem */
+
+.nuvem:nth-child(2) {
+    top: 75px;
+    left: -30px;
+
+    scale: 0.75;
+
+    animation: nuvemMovimento1 35s linear infinite;
+}
+
+
+/* Segunda nuvem */
+
+.nuvem:nth-child(3) {
+    top: 125px;
+    left: 315px;
+
+    scale: 0.85;
+
+    animation: nuvemMovimento2 42s linear infinite;
+}
+
+
+/* Terceira nuvem */
+
+.nuvem:nth-child(4) {
+    top: 65px;
+    left: 555px;
+
+    scale: 0.6;
+
+    animation: nuvemMovimento3 38s linear infinite;
+}
+
+
+/* Quarta nuvem */
+
+.nuvem:nth-child(5) {
+    top: 155px;
+    left: 680px;
+
+    scale: 0.8;
+
+    animation: nuvemMovimento4 45s linear infinite;
+}
+
+
+/* Quinta nuvem */
+
+.nuvem:nth-child(6) {
+    top: 30px;
+    left: 190px;
+
+    scale: 0.5;
+
+    animation: nuvemMovimento5 50s linear infinite;
+}
+
+
+/* =====================================================
+   MOVIMENTO DAS NUVENS
+===================================================== */
+
+@keyframes nuvemMovimento1 {
+
+    from {
+        translate: -100px 0;
+    }
+
+    to {
+        translate: 1050px 0;
+    }
+
+}
+
+
+@keyframes nuvemMovimento2 {
+
+    from {
+        translate: -500px 0;
+    }
+
+    to {
+        translate: 900px 0;
+    }
+
+}
+
+
+@keyframes nuvemMovimento3 {
+
+    from {
+        translate: -300px 0;
+    }
+
+    to {
+        translate: 700px 0;
+    }
+
+}
+
+
+@keyframes nuvemMovimento4 {
+
+    from {
+        translate: -700px 0;
+    }
+
+    to {
+        translate: 500px 0;
+    }
+
+}
+
+
+@keyframes nuvemMovimento5 {
+
+    from {
+        translate: -200px 0;
+    }
+
+    to {
+        translate: 900px 0;
+    }
+
+}
+
+
+/* =====================================================
+   TERRA
+===================================================== */
+
+.terra {
+    
+
+    width: 100%;
+    height: 37%;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #4fbd3f 0%,
+            #39a735 45%,
+            #237a2c 100%
+        );
+}
+
+
+/* =====================================================
+   SOMBRA GERAL DO CHÃO
+===================================================== */
+
+.terra::before {
+    content: "";
+
+    position: absolute;
+
+    width: 100%;
+    height: 30px;
+
+    top: 0;
+    left: 0;
+
+    background: rgba(20, 90, 25, 0.15);
+
+    z-index: 1;
+}
+
+
+/* =====================================================
+   ÁRVORE BASE
+===================================================== */
+
+.arvore {
+    position: absolute;
+
+    width: 34px;
+    height: 145px;
+
+    bottom: -8px;
+
+    z-index: 10;
+
+    transform-origin: bottom center;
+
+    /* Tronco */
+
+    background: linear-gradient(
+        to right,
+        #321b0b 0%,
+        #542e13 18%,
+        #78451f 42%,
+        #8a5228 55%,
+        #603516 78%,
+        #351c0c 100%
+    );
+
+    border-radius:
+        12px
+        12px
+        5px
+        5px;
+
+    box-shadow:
+        5px 0 8px rgba(0, 0, 0, 0.18);
+
+    animation: ventoArvore 4s ease-in-out infinite alternate;
+}
+
+
+/* =====================================================
+   GALHO PRINCIPAL
+===================================================== */
+
+.arvore::after {
+    content: "";
+
+    position: absolute;
+
+    width: 13px;
+    height: 82px;
+
+    left: 7px;
+    top: 15px;
+
+    background: linear-gradient(
+        to right,
+        #3a1e0c,
+        #633616,
+        #45230e
+    );
+
+    border-radius: 20px;
+
+    transform: rotate(-32deg);
+
+    transform-origin: bottom center;
+
+    z-index: 1;
+}
+
+
+/* =====================================================
+   COPA PRINCIPAL
+===================================================== */
+
+.arvore::before {
+    content: "";
+
+    position: absolute;
+
+    width: 125px;
+    height: 110px;
+
+    left: -46px;
+    top: -95px;
+
+    border-radius: 50%;
+
+    background: #24782c;
+
+    box-shadow:
+
+        /* topo */
+
+        28px -25px 0 #31953a,
+        65px -17px 0 #2b8733,
+
+        /* esquerda */
+
+        -27px 12px 0 #1e6826,
+
+        /* centro */
+
+        15px 25px 0 #2d8d36,
+
+        /* direita */
+
+        62px 25px 0 #267f2f,
+
+        /* baixo */
+
+        88px 35px 0 #1e6c27;
+}
+
+
+/* =====================================================
+   SOMBRA DAS ÁRVORES
+===================================================== */
+
+.arvore {
+    filter:
+        drop-shadow(
+            8px 7px 5px rgba(0, 0, 0, 0.2)
+        );
+}
+
+
+/* =====================================================
+   POSIÇÃO DAS 12 ÁRVORES
+===================================================== */
+
+/* árvore 1 */
+
+.arvore:nth-child(1) {
+    left: 5px;
+
+    scale: 0.58;
+
+    z-index: 4;
+}
+
+
+/* árvore 2 */
+
+.arvore:nth-child(2) {
+    left: 75px;
+
+    scale: 0.75;
+
+    z-index: 5;
+
+    animation-delay: 0.3s;
+}
+
+
+/* árvore 3 */
+
+.arvore:nth-child(3) {
+    left: 145px;
+
+    scale: 0.62;
+
+    z-index: 4;
+
+    animation-delay: 0.8s;
+}
+
+
+/* árvore 4 */
+
+.arvore:nth-child(4) {
+    left: 215px;
+
+    scale: 0.95;
+
+    z-index: 7;
+
+    animation-delay: 0.5s;
+}
+
+
+/* árvore 5 */
+
+.arvore:nth-child(5) {
+    left: 300px;
+
+    scale: 0.7;
+
+    z-index: 5;
+
+    animation-delay: 1s;
+}
+
+
+/* árvore 6 */
+
+.arvore:nth-child(6) {
+    left: 375px;
+
+    scale: 0.9;
+
+    z-index: 7;
+
+    animation-delay: 0.7s;
+}
+
+
+/* árvore 7 */
+
+.arvore:nth-child(7) {
+    left: 455px;
+
+    scale: 0.6;
+
+    z-index: 4;
+
+    animation-delay: 1.2s;
+}
+
+
+/* árvore 8 */
+
+.arvore:nth-child(8) {
+    left: 525px;
+
+    scale: 1.05;
+
+    z-index: 8;
+
+    animation-delay: 0.4s;
+}
+
+
+/* árvore 9 */
+
+.arvore:nth-child(9) {
+    left: 625px;
+
+    scale: 0.7;
+
+    z-index: 5;
+
+    animation-delay: 1.4s;
+}
+
+
+/* árvore 10 */
+
+.arvore:nth-child(10) {
+    left: 700px;
+
+    scale: 0.95;
+
+    z-index: 7;
+
+    animation-delay: 0.6s;
+}
+
+
+/* árvore 11 */
+
+.arvore:nth-child(11) {
+    left: 785px;
+
+    scale: 0.65;
+
+    z-index: 4;
+
+    animation-delay: 1s;
+}
+
+
+/* árvore 12 */
+
+.arvore:nth-child(12) {
+    left: 855px;
+
+    scale: 0.85;
+
+    z-index: 6;
+
+    animation-delay: 0.2s;
+}
+
+
+/* =====================================================
+   VARIAÇÃO DAS FOLHAS
+===================================================== */
+
+/* Árvores mais claras */
+
+.arvore:nth-child(2)::before,
+.arvore:nth-child(5)::before,
+.arvore:nth-child(8)::before {
+
+    background: #2d8933;
+
+    box-shadow:
+
+        28px -25px 0 #3ba641,
+        65px -17px 0 #32983a,
+        -27px 12px 0 #25752b,
+        15px 25px 0 #35983c,
+        62px 25px 0 #2b8632,
+        88px 35px 0 #24782c;
+}
+
+
+/* Árvores escuras */
+
+.arvore:nth-child(3)::before,
+.arvore:nth-child(7)::before,
+.arvore:nth-child(11)::before {
+
+    background: #1c6825;
+
+    box-shadow:
+
+        28px -25px 0 #287d2e,
+        65px -17px 0 #236f29,
+        -27px 12px 0 #175a20,
+        15px 25px 0 #26782d,
+        62px 25px 0 #1f6b27,
+        88px 35px 0 #185d21;
+}
+
+
+/* =====================================================
+   TEXTURA NO TRONCO
+===================================================== */
+
+.arvore:nth-child(4),
+.arvore:nth-child(8),
+.arvore:nth-child(10) {
+
+    background: linear-gradient(
+        to right,
+        #2f1909,
+        #5d3215,
+        #8d5429,
+        #6a3918,
+        #3a1e0c
+    );
+}
+
+
+/* =====================================================
+   VENTO
+===================================================== */
+
+@keyframes ventoArvore {
+
+    from {
+        rotate: -1deg;
+    }
+
+    to {
+        rotate: 1.5deg;
+    }
+
+}
+
+
+/* =====================================================
+   GRAMA
+===================================================== */
+
+.terra::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 18px;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent 0px,
+            transparent 8px,
+            rgba(20, 100, 28, 0.35) 9px,
+            rgba(20, 100, 28, 0.35) 11px
+        );
+
+    z-index: 20;
+
+    pointer-events: none;
+}
