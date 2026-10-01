@@ -24,10 +24,14 @@ function SistemaSolar() {
                 <div class="Mars"></div>
             </div>
             <div class="orbita-Jupiter">
-                <div class="Jupiter"></div>
+                <div className="anels">
+                  <div class="Jupiter"></div>   
+                </div>
             </div>
             <div class="orbita-Saturne">
-                <div class="Saturne"></div>
+                <div className="anel">
+                  <div class="Saturne"></div>  
+                </div>
             </div>
             <div class="orbita-Uranus">
                 <div class="Uranus"></div>
